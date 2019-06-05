@@ -1,6 +1,14 @@
 
 <?php
 
+if( $_REQUEST['btn']=="decipher"){
+    if( isset($_POST['text']) ) {
+        if (is_numeric($_POST['casas'])){
+            decifrar($_POST['text'], $_POST['casas']);
+        }
+    }
+}
+
 function decifrar($str, $casas) {
     $decrypted_text = "";
     $casas = $casas % 26;
@@ -13,9 +21,9 @@ function decifrar($str, $casas) {
         if(($c >= "a") && ($c <= 'z')) {
             if((ord($c) - $casas) < ord("a")) {
                 $decrypted_text .= chr(ord($c) - $casas + 26);
-        } else {
-            $decrypted_text .= chr(ord($c) - $casas);
-        }
+            } else {
+                $decrypted_text .= chr(ord($c) - $casas);
+            }
         } else if($c == "'"){
             $decrypted_text .= "'";
         }else if($c == "."){
@@ -27,29 +35,10 @@ function decifrar($str, $casas) {
         }
       $i++;
     }
-    return $decrypted_text;
+    echo $decrypted_text;
 }
 
-$url = 'answer.json';
-$data = file_get_contents($url);
-$char = json_decode($data);
 
-$casas = $char->numero_casas;
-$enc = $char->cifrado;
-
-$decifrado = decifrar($enc, $casas);
-$char->decifrado = $decifrado;
-$resumo = sha1($decifrado);
-$char->resumo_criptografico = $resumo;
-
-$njs = json_encode($char);
-file_put_contents('answer.json', $njs);
-
-echo $enc;
-echo "<br />";
-echo decifrar($enc, $casas);
-echo "<br />";
-echo sha1($decifrado);
 
 
 ?>
