@@ -64,7 +64,7 @@
     
     <a class="grey-text text-darken-4 right" style='margin-left:10px;' href="https://github.com/carlosedcr" target="_blank"><i class="fab fa-github fa-lg"></i></a>
     <a class="grey-text text-darken-4 right" style='margin-left:10px;' href="https://www.linkedin.com/in/carlos-eduardo-corr%C3%AAa-7744a493/" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
-    <a class="grey-text text-darken-4 right" href="mailto:carlosedcorrea2@gmail.com" target="_blank"><i class="far fa-envelope fa-lg"></i></a>
+    <a class="grey-text text-darken-4 right" href="mailto:carlosedcorrea2@gmail.com"><i class="far fa-envelope fa-lg"></i></a>
     
     </div>
 </footer>
