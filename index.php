@@ -6,14 +6,17 @@
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/e04c4a51a8.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="imageedit_4_4244413588.png">
+    <link rel="icon" href="logo.png">
     <title>Caesar Cipher</title>
 </head>
 
-<body>
+
+<body style="display:flex;min-height: 100vh;flex-direction: column;">
+<main style="flex: 1 0 auto;">
     <div class="container">
-        <h1 class="center-align"><img src="imageedit_4_4244413588.png" width="50" height="50" alt="">Caesar Cipher</h1>
+        <h1 class="center-align"><img src="logo.png" width="50" height="50" alt="">Caesar Cipher</h1>
         <form method="post">
         <div class="row">
             <div class="input-field col offset-s4 s4">
@@ -40,6 +43,9 @@
             <?php endif ?>
         <?php endif ?>
     </div>
+  
+
+</main>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -49,6 +55,18 @@
         $('select').attr("class", "browser-default");
         });
     </script>
+
 </body>
+
+<footer class="page-footer grey lighten-5">
+    <div class="container" style="margin-bottom:5px;">
+    <a class="grey-text text-darken-4"> © 2019 Carlos Correa</a>
+    
+    <a class="grey-text text-darken-4 right" style='margin-left:10px;' href="https://github.com/carlosedcr" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+    <a class="grey-text text-darken-4 right" style='margin-left:10px;' href="https://www.linkedin.com/in/carlos-eduardo-corr%C3%AAa-7744a493/" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
+    <a class="grey-text text-darken-4 right" href="mailto:carlosedcorrea2@gmail.com" target="_blank"><i class="far fa-envelope fa-lg"></i></a>
+    
+    </div>
+</footer>
 
 </html>
